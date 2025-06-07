@@ -1,0 +1,72 @@
+/// Local API Configuration Template
+/// 
+/// 1. Copy this file to 'constants_local.dart'
+/// 2. Replace the placeholder values with your real API credentials
+/// 3. The constants_local.dart file is gitignored to keep your credentials safe
+/// 
+/// Example:
+/// cp constants_local.dart.template constants_local.dart
+/// 
+/// Then edit constants_local.dart with your real values.
+
+import 'constants.dart';
+
+/// Your actual API configuration
+/// Replace these values with your real credentials
+class LocalApiConstants {
+  // 🔑 Your Real API Credentials
+  static const String apiKey = 'sk_live_your_real_api_key_here';
+  static const String apiSecret = 'your_real_api_secret_here';
+  static const String baseUrl = 'https://dnyantra-cloud.in';
+  static const String bucketId = '1'; // Your actual bucket ID
+  
+  // 🌍 Environment Selection
+  static const String currentEnvironment = 'production'; // 'development', 'staging', or 'production'
+  
+  // 📱 Get current configuration
+  static ApiConfig get currentConfig {
+    // You can either use the environment configurations
+    // return ApiConstants.getEnvironment(currentEnvironment);
+    
+    // Or create a custom configuration with your credentials
+    return const ApiConfig(
+      name: 'My Configuration',
+      apiKey: apiKey,
+      apiSecret: apiSecret,
+      baseUrl: baseUrl,
+      bucketId: bucketId,
+    );
+  }
+  
+  // 🔧 Development Override (optional)
+  // Uncomment and modify if you want to override settings for development
+  /*
+  static const ApiConfig developmentConfig = ApiConfig(
+    name: 'Development Override',
+    apiKey: 'sk_dev_your_dev_key',
+    apiSecret: 'your_dev_secret',
+    baseUrl: 'http://localhost:8000',
+    bucketId: '1',
+  );
+  */
+}
+
+/// Instructions for setup:
+/// 
+/// 1. Get your API credentials from your storage bucket dashboard
+/// 2. Replace the placeholder values above with your real credentials
+/// 3. Choose your environment (development/staging/production)
+/// 4. Save this file as 'constants_local.dart'
+/// 5. Import it in your main.dart file
+/// 
+/// Example usage in main.dart:
+/// ```dart
+/// import 'config/constants_local.dart';
+/// 
+/// // Use in your app:
+/// final config = LocalApiConstants.currentConfig;
+/// _apiKeyController.text = config.apiKey;
+/// _apiSecretController.text = config.apiSecret;
+/// _baseUrlController.text = config.baseUrl;
+/// _bucketIdController.text = config.bucketId;
+/// ``` 

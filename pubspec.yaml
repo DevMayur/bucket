@@ -1,0 +1,38 @@
+name: flutter_storage_bucket
+description: A comprehensive Flutter library for storage bucket operations with API key authentication. Supports upload, download, list, and delete operations across all platforms with CORS handling.
+version: 1.0.0
+homepage: https://github.com/DevMayur/bucket
+repository: https://github.com/DevMayur/bucket
+issue_tracker: https://github.com/DevMayur/bucket/issues
+documentation: https://github.com/DevMayur/bucket#readme
+
+topics:
+  - storage
+  - api
+  - file-upload
+  - file-download
+  - bucket
+  - cloud-storage
+  - http
+  - cross-platform
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  dio: ^5.3.2
+  mime: ^1.0.4
+  path: ^1.8.3
+  crypto: ^3.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+# This is a pure Dart package, no native platform code needed
+flutter: 

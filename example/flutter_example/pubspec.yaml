@@ -1,0 +1,27 @@
+name: flutter_example
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  # Updated file_picker to latest version for v2 embedding support
+  file_picker: ^8.0.0+1
+  
+  # Storage bucket library dependency
+  flutter_storage_bucket:
+    path: ../../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true 
